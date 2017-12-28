@@ -22,7 +22,7 @@
     <div class="container">
       <form method="POST">
         <div class="form-group">
-          <textarea name="text" class="form-control" rows="10" placeholder="Введите текст" autofocus>{{ request.form.get('text') or '' }}</textarea>
+          <textarea name="text" class="form-control" rows="10" placeholder="Введите текст" autofocus>{{ source_text }}</textarea>
         </div>
 
         <div class="form-group">

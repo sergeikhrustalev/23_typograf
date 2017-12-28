@@ -5,12 +5,9 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def form():
 
-    if request.method == 'POST':
-        result_text = request.form.get('text')
- 
-        return render_template('form.html', result_text=result_text)
-
-    return render_template('form.html')
+    source_text = request.form.get('text') or ''
+    result_text = source_text
+    return render_template('form.html', source_text=source_text, result_text=result_text)
 
 if __name__ == "__main__":
     app.run()
