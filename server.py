@@ -8,7 +8,9 @@ def form():
     if request.method == 'POST':
         result_text = request.form.get('text')
  
-    return render_template('form.html', result_text=result_text)
+        return render_template('form.html', result_text=result_text)
+
+    return render_template('form.html')
 
 if __name__ == "__main__":
     app.run()
